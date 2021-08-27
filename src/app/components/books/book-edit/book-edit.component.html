@@ -1,0 +1,19 @@
+<div class="container">
+  <form *ngIf="formEditBook" [formGroup]="formEditBook" (ngSubmit)="submit()">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Sách</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Book Name"
+             formControlName="title">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput2" class="form-label">Tác giả</label>
+      <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Author"
+             formControlName="author">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Mô tả</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="description"></textarea>
+    </div>
+    <button class="btn btn-success" type="submit">Chỉnh sửa</button>
+  </form>
+</div>
